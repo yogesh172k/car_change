@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color change</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body  class="body">
+  
+    
+    <div class="car">
+      <h1 class="head1">Buy a Sports Car</h1>
+      <p>A sports car is a car designed with an emphasis on dynamic performance,<br> such as handling, acceleration, top speed, the thrill of driving and racing capability.<br> Sports cars originated in Europe in early 1902 and are currently </p>
+      <h2 class="head2">Cars<span class="changecontent"></span></h2>
+      <h5 class="head3">Book Your Test Drive <button>BOOK</button></h5>
+     
+        <div class="path">
+          
+        <ul>
+            <li><img src="images\car1.png" onclick="big('images/car1.png');path('black');bg('white')"></li>
+            <li><img src="images\car3.png" onclick="big('images/car3.png');path('darkred');bg('lightgreen')"></li>
+            <li><img src="images\car2.png" onclick="big('images/car2.png');path('blue');bg('white')"></li>
+        </ul>
+    </div>
+    <div class="big-img">
+        <img src="images\car1.png" class="big"> 
+        
+</div> 
+<script>
+    function big(image){
+        document.querySelector('.big').src=image;
+
+    }
+    function path(color){
+     const path=document.querySelector('.path');
+     path.style.background = color;
+    }
+    function bg(background){
+        const bg=document.querySelector('.body');
+        bg.style.background=background;
+    }
+</script>
+</body>
+</html>
